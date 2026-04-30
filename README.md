@@ -98,6 +98,8 @@ Customers were assigned scores (1–4) for each metric using quartiles.
 
 📈 Dashboard (Streamlit)
 
+![Project Dashboard](visuals/charts/dashboard.png)
+
 An interactive dashboard was developed using Streamlit to visualize:
 
 * Sales trends over time
