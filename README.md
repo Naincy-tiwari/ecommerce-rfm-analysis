@@ -1,29 +1,47 @@
-🛒 E-Commerce Sales & Customer Segmentation (RFM Analysis)
+ 🛒 E-Commerce Sales & Customer Segmentation (RFM Analysis)
+
+ 📊 Dashboard Preview
+
+![Dashboard](visuals/charts/dashboard.png)
+
+---
+
+❓ Business Problem
+
+E-commerce companies generate massive transaction data but often struggle to identify high-value customers and reduce churn.
+
+This project aims to answer:
+
+* Who are the most valuable customers?
+* Which customers are at risk of churn?
+* How can businesses improve retention and revenue?
+
+---
 
 📌 Project Overview
 
-This project performs an end-to-end analysis of e-commerce transactional data to uncover key business insights and segment customers using RFM (Recency, Frequency, Monetary) analysis.
+This is an end-to-end data analysis project that explores e-commerce sales data to extract business insights and perform customer segmentation using RFM (Recency, Frequency, Monetary) analysis.
 
-The objective is to analyze sales performance, understand customer behavior, and provide actionable strategies to improve customer retention and revenue growth.
+The project combines **Python, SQL, and dashboarding** to simulate real-world business analytics workflows.
 
 ---
 
 🎯 Objectives
 
-* Analyze overall sales trends and revenue patterns
+* Analyze sales trends and revenue patterns
 * Identify top-performing products and regions
-* Understand customer purchasing behavior
+* Understand customer purchase behavior
 * Segment customers using RFM analysis
-* Build an interactive dashboard for data visualization
+* Build an interactive dashboard for visualization
 
 ---
 
 🛠️ Tech Stack
 
-* **Python**: Pandas, NumPy, Matplotlib, Seaborn
-* **SQL**: Aggregations, Joins, Group By
-* **Streamlit**: Interactive dashboard
-* **Dataset**: E-commerce transactional data (Excel)
+* Python (Pandas, NumPy, Matplotlib, Seaborn)
+* SQL (Aggregation, Joins, Group By)
+* Streamlit (Dashboard Development)
+* Excel Dataset
 
 ---
 
@@ -33,24 +51,23 @@ The objective is to analyze sales performance, understand customer behavior, and
 ecommerce-rfm-analysis/
 │
 ├── data/
-│   ├── raw/                # Original dataset (excluded due to size)
-│   └── processed/          # Cleaned datasets
+│   └── processed/
+│       ├── rfm_data.csv
+│       └── rfm_segments.csv
 │
 ├── notebooks/
-│   └── eda.ipynb           # Data analysis & EDA
+│   └── eda.ipynb
 │
 ├── sql/
-│   └── queries.sql         # SQL queries for analysis
+│   └── queries.sql
 │
 ├── visuals/
-│   └── charts/             # Generated charts & graphs
+│   └── charts/
+│       └── dashboard.png
 │
 ├── src/
-│   └── dashboard.py        # Streamlit dashboard code
+│   └── dashboard.py
 │
-├── rfm_data.csv            # RFM calculated dataset
-├── rfm_segments.csv        # Customer segments
-├── requirements.txt
 └── README.md
 ```
 
@@ -59,109 +76,109 @@ ecommerce-rfm-analysis/
 🧹 Data Cleaning & Preprocessing
 
 * Removed missing Customer IDs
-* Filtered out negative/invalid transactions
-* Eliminated duplicate records
-* Converted date columns to datetime format
-* Created a new **Revenue** column
+* Filtered invalid transactions (negative quantity/price)
+* Removed duplicates
+* Converted date columns
+* Created **Revenue column**
 
 ---
 
 📊 Exploratory Data Analysis (EDA)
 
-* Revenue trend analysis over time
-* Top-selling products identification
-* Country-wise sales performance
-* Customer purchase behavior analysis
+* Monthly revenue trends
+* Country-wise performance
+* Top-selling products
+* Customer-level behavior
+
+---
+
+🧾 SQL Analysis
+
+SQL was used to extract business insights directly from transaction data.
+
+Example Query:
+
+```sql
+SELECT Country, SUM(Quantity * Price) AS Revenue
+FROM retail
+GROUP BY Country
+ORDER BY Revenue DESC;
+```
+
+More queries available in `sql/queries.sql`.
 
 ---
 
 🧠 RFM Analysis (Core Feature)
 
-RFM analysis was used to segment customers based on:
+RFM is a widely used customer segmentation technique based on:
 
-* **Recency (R)** → How recently a customer made a purchase
-* **Frequency (F)** → How often they purchase
-* **Monetary (M)** → How much they spend
+* **Recency** → Days since last purchase
+* **Frequency** → Number of purchases
+* **Monetary** → Total spending
 
- 🔢 RFM Scoring
+Customers were scored and segmented into:
 
-Customers were assigned scores (1–4) for each metric using quartiles.
-
-👥 Customer Segments
-
-* **VIP Customers** → High value, frequent, recent buyers
-* **Loyal Customers** → Frequent buyers
-* **At-Risk Customers** → Inactive customers
-* **Regular Customers** → Average engagement
+* VIP Customers
+* Loyal Customers
+* At-Risk Customers
+* Regular Customers
 
 ---
 
-📈 Dashboard (Streamlit)
+🔍 Key Findings
 
-![Project Dashboard](visuals/charts/dashboard.png)
-
-An interactive dashboard was developed using Streamlit to visualize:
-
-* Sales trends over time
-* Customer segments distribution
-* Top products and regions
+* A small percentage of customers contribute the majority of revenue (Pareto effect)
+* Customers with low recency show high churn risk
+* Loyal customers generate consistent repeat revenue
+* Certain regions dominate overall sales performance
 
 ---
 
-💡 Key Business Insights
+📈 Dashboard
 
-* A small percentage of customers generate the majority of revenue (Pareto Principle)
-* Certain products consistently outperform others
-* Revenue is concentrated in specific regions
-* Customer retention is critical for long-term growth
+An interactive Streamlit dashboard was built to visualize:
+
+* Sales trends
+* Customer segmentation
+* Revenue distribution
 
 ---
 
-🚀 Business Recommendations
+💡 Business Recommendations
 
-* Implement loyalty programs for VIP customers
-* Re-engage at-risk customers through targeted campaigns
-* Focus inventory on top-performing products
-* Expand marketing efforts in high-revenue regions
+* Target VIP customers with loyalty programs
+* Re-engage at-risk customers with discounts
+* Focus marketing on high-performing regions
+* Improve retention strategies for long-term growth
 
 ---
 
 📁 Dataset Note
 
-The original dataset was large and is not included in this repository due to GitHub file size limitations.
-
-A cleaned and processed dataset is provided for analysis.
-The original dataset can be obtained from public sources such as Kaggle or UCI Machine Learning Repository.
+Large raw datasets are excluded due to GitHub file size limits.
+Processed datasets are included for analysis.
 
 ---
 
-▶️ How to Run the Project
+🚀 How to Run
 
-1️⃣ Install dependencies
-
-```
 pip install -r requirements.txt
-```
-
-2️⃣ Run Streamlit dashboard
-
-```
 streamlit run src/dashboard.py
-```
 
 ---
 
 🔮 Future Improvements
 
-* Customer churn prediction using Machine Learning
-* Sales forecasting models
-* Deployment of dashboard on cloud platforms
+* Customer churn prediction (Machine Learning)
+* Sales forecasting
+* Cloud deployment
 
 ---
 
 📌 Conclusion
 
-This project demonstrates end-to-end data analysis capabilities including data cleaning, exploratory analysis, SQL querying, customer segmentation, and dashboard development, making it highly relevant for Data Analyst roles.
+This project demonstrates strong skills in data cleaning, analysis, SQL querying, customer segmentation, and dashboard development — aligning with real-world Data Analyst responsibilities.
 
 ---
 
