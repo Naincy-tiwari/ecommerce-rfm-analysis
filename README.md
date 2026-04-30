@@ -34,7 +34,7 @@ ecommerce-rfm-analysis/
 │
 ├── data/
 │   ├── raw/                # Original dataset (excluded due to size)
-│   └── proccessed/          # Cleaned datasets
+│   └── processed/          # Cleaned datasets
 │
 ├── notebooks/
 │   └── eda.ipynb           # Data analysis & EDA
