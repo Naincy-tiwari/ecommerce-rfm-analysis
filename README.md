@@ -1,4 +1,4 @@
- 🛒 E-Commerce Sales & Customer Segmentation (RFM Analysis)
+ E-Commerce Sales & Customer Segmentation (RFM Analysis)
 
  📊 Dashboard Preview
 
@@ -6,7 +6,7 @@
 
 ---
 
-❓ Business Problem
+Business Problem
 
 E-commerce companies generate massive transaction data but often struggle to identify high-value customers and reduce churn.
 
@@ -18,7 +18,7 @@ This project aims to answer:
 
 ---
 
-📌 Project Overview
+Project Overview
 
 This is an end-to-end data analysis project that explores e-commerce sales data to extract business insights and perform customer segmentation using RFM (Recency, Frequency, Monetary) analysis.
 
@@ -26,7 +26,7 @@ The project combines **Python, SQL, and dashboarding** to simulate real-world bu
 
 ---
 
-🎯 Objectives
+Objectives
 
 * Analyze sales trends and revenue patterns
 * Identify top-performing products and regions
@@ -36,7 +36,7 @@ The project combines **Python, SQL, and dashboarding** to simulate real-world bu
 
 ---
 
-🛠️ Tech Stack
+Tech Stack
 
 * Python (Pandas, NumPy, Matplotlib, Seaborn)
 * SQL (Aggregation, Joins, Group By)
@@ -45,7 +45,7 @@ The project combines **Python, SQL, and dashboarding** to simulate real-world bu
 
 ---
 
-📂 Project Structure
+Project Structure
 
 ```
 ecommerce-rfm-analysis/
@@ -73,7 +73,7 @@ ecommerce-rfm-analysis/
 
 ---
 
-🧹 Data Cleaning & Preprocessing
+Data Cleaning & Preprocessing
 
 * Removed missing Customer IDs
 * Filtered invalid transactions (negative quantity/price)
@@ -83,7 +83,7 @@ ecommerce-rfm-analysis/
 
 ---
 
-📊 Exploratory Data Analysis (EDA)
+Exploratory Data Analysis (EDA)
 
 * Monthly revenue trends
 * Country-wise performance
@@ -92,7 +92,7 @@ ecommerce-rfm-analysis/
 
 ---
 
-🧾 SQL Analysis
+SQL Analysis
 
 SQL was used to extract business insights directly from transaction data.
 
@@ -109,7 +109,7 @@ More queries available in `sql/queries.sql`.
 
 ---
 
-🧠 RFM Analysis (Core Feature)
+RFM Analysis (Core Feature)
 
 RFM is a widely used customer segmentation technique based on:
 
@@ -126,7 +126,7 @@ Customers were scored and segmented into:
 
 ---
 
-🔍 Key Findings
+ Key Findings
 
 * A small percentage of customers contribute the majority of revenue (Pareto effect)
 * Customers with low recency show high churn risk
@@ -135,7 +135,7 @@ Customers were scored and segmented into:
 
 ---
 
-📈 Dashboard
+Dashboard
 
 An interactive Streamlit dashboard was built to visualize:
 
@@ -145,7 +145,7 @@ An interactive Streamlit dashboard was built to visualize:
 
 ---
 
-💡 Business Recommendations
+Business Recommendations
 
 * Target VIP customers with loyalty programs
 * Re-engage at-risk customers with discounts
@@ -154,21 +154,21 @@ An interactive Streamlit dashboard was built to visualize:
 
 ---
 
-📁 Dataset Note
+Dataset Note
 
 Large raw datasets are excluded due to GitHub file size limits.
 Processed datasets are included for analysis.
 
 ---
 
-🚀 How to Run
+How to Run
 
 pip install -r requirements.txt
 streamlit run src/dashboard.py
 
 ---
 
-🔮 Future Improvements
+Future Improvements
 
 * Customer churn prediction (Machine Learning)
 * Sales forecasting
@@ -176,7 +176,7 @@ streamlit run src/dashboard.py
 
 ---
 
-📌 Conclusion
+Conclusion
 
 This project demonstrates strong skills in data cleaning, analysis, SQL querying, customer segmentation, and dashboard development — aligning with real-world Data Analyst responsibilities.
 
